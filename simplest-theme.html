@@ -1,28 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <title>{Title}</title>
-        <link rel="shortcut icon" href="{Favicon}">
-        <link rel="alternate" type="application/rss+xml" href="{RSS}">
-        {block:Description}
-            <meta name="description" content="{MetaDescription}" />
-        {/block:Description}
-    </head>
-    <body>
-        <h1>{Title}</h1>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//edu.mkrecny.com/h5bp/css/normalize.css">
+    <link rel="stylesheet" href="//edu.mkrecny.com/h5bp/css/main.css">
+    <link rel="stylesheet" href="//edu.mkrecny.com/stylesheets/main.css">
+    <link rel="stylesheet" href="//edu.mkrecny.com/font-awesome/css/font-awesome.css">
+    <script src="//edu.mkrecny.com/h5bp/js/vendor/modernizr-2.6.1.min.js"></script>
+    <script src="//edu.mkrecny.com/h5bp/js/plugins.js"></script>
+    <script src="//edu.mkrecny.com/h5bp/js/main.js"></script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="description" content="{MetaDescription}" /> 
+    <link rel="shortcut icon" href="{Favicon}" /> 
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"> 
+    
+    <title>{Title}</title> 
+    
+    <style type="text/css">
+      <!--
+        
+        {CustomCSS}
+                              
+      -->
+    </style> 
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    
+    <div class="stack-el navigator skinny headroom-s">
 
-        {block:Description}
-            <p id="description">{Description}</p>
-        {/block:Description}
-
-        <ol id="posts">
+</div>
+<div class="full">
+  <div style="width:550px" class="stack-el">
+    <ul id="posts">
             {block:Posts}
                 {block:Text}
                     <li class="post text">
                         {block:Title}
-                            <h3><a href="{Permalink}">{Title}</a></h3>
-                        {/block:Title}
+                            <p>
+    <span style="color:#353535"><b><a href="{Permalink}">{Title}</a></b></span>
+    &nbsp;&nbsp;<a href="https://twitter.com/share" class="twitter-share-button" data-text="{Title}" data-via="hkyupark">Tweet</a>
+    {/block:Title}
+    <hr>
+  </p>
+  <p>
+                      {Body}
+  </p>
+  <p>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="{Title}" data-via="hkyupark">Tweet</a>
+  </p>
+                        
 
-                        {Body}
+      
                     </li>
                 {/block:Text}
 
@@ -118,18 +157,27 @@
                     </li>
                 {/block:Audio}
             {/block:Posts}
-        </ol>
+        </ul>
+  <p>
+    <span style="color:#353535"><b>{Title}</b></span>
+    &nbsp;&nbsp;<a href="https://twitter.com/share" class="twitter-share-button" data-text="{Title}" data-via="hkyupark">Tweet</a>
+    <hr>
+  </p>
+    <a href="">Comments</a>
+  </p>
+  <p>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="{Title}" data-via="hkyupark">Tweet</a>
+  </p>
+  
+</div>
 
-        <p id="footer">
-            {block:PreviousPage}
-                <a href="{PreviousPage}">&#171; Previous</a>
-            {/block:PreviousPage}
-
-            {block:NextPage}
-                <a href="{NextPage}">Next &#187;</a>
-            {/block:NextPage}
-
-            <a href="/archive">Archive</a>
-        </p>
-    </body>
+</div>
+<div class="myles-footer stack-el footroom-l">
+  <hr>
+  This was written by <a class="blog-link" href="http://kyupark.com">Kyu Park</a>
+  <br>
+  <span class="more-posts" style="opacity:0.3"><a href="/">read more posts</a><br></span>
+  <span class="" style="opacity:0.3"><a href="">get my posts in your inbox</a></span>
+</div>
+  </body>
 </html>
